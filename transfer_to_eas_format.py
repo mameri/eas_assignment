@@ -69,6 +69,13 @@ def main(p_all_in_one_dir, p_eas_format_dir):
 
         shutil.copy(mark_file_full_path_with_id,mark_file_full_path)
 
+        print mark_file_full_path_with_id
+        print mark_file_full_path
+
+        des_file = time_dir + '/mark.txt'
+        if os.path.exists(des_file):
+            os.remove(des_file)
+
         shutil.move(mark_file_full_path, time_dir)
 
 
