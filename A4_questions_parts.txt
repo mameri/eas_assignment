@@ -1,0 +1,12 @@
+Q1: a b
+Q2: 
+Q3: a b c
+Q4:
+Q5: 
+Q6:
+Q7: a b c
+Q8: a b c d e f g h  
+Q9: a b
+Q10: a b c d
+Q11:
+Q12:

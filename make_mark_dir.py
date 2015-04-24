@@ -46,8 +46,12 @@ def make_mark_file(mark_file_name, student_item, submission_item, time_snap,ques
             str_q = '{2}{0}\n{1}'.format(q[0], str_seprator, str_half_space)
             file_h.write(str_q)
 
+            if len(q[1]) == 0:
+                file_h.write('0\n')
+
+
             for part in q[1]:
-                str_part = '({0})\n\n'.format(part)
+                str_part = '({0})\n0\n'.format(part)
                 file_h.write(str_part)
 
             #file_h.write(str_q)
@@ -144,6 +148,10 @@ def main(p_source_dir, p_target_dir, p_q_file):
                     if not os.path.exists(file_in_target):
                         # print 'creating ' , (file_in_target)
                         shutil.copy(submission_file_name,student_folder)
+
+                    # if file_in_target[-3:] == 'zip':
+                    #     os.system('unzip {0} -d {1} '.format(file_in_target, student_folder))
+
 
                 student_mark = os.path.join( student_folder, submission_name + 'mark_.txt')
 

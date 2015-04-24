@@ -45,8 +45,11 @@ def sum_student_mark_(p_source_file, p_target_file, p_question_list):
 
     question_header = [ [question_item, str_line, score_lines.index(str_line)]\
                         for question_item in p_question_list  for str_line in score_lines \
-                     if question_item[0] in str_line]
+                     if question_item[0]+'\n' in str_line]
 
+
+    # for question_header_item in question_header:
+    #     print question_header_item
 
 
     for question_item in question_header:
